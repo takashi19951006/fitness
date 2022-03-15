@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="top">
+<p>Login User:{{user.id}}さん</p>
+<a href="/logout" id="logout">Logout</a>
+</div>
+    <div id="data">
+        <h3 class="title">身体データ</h3>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>身長</th>
+                    <th>体重</th>
+                    <th>目標摂取タンパク質</th>
+                    <th>摂取タンパク質</th>
+                    <th>基礎代謝</th>
+                    <th>活動代謝</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{user.height}}cm</td>
+                    <td>{{user.weight}}kg</td>
+                    <td>{{user.protein}}g</td>
+                    <td>{{today_protein.protein}}g</td>
+                    <td>{{user.bmr}}kcal</td>
+                    <td>{{user.tdee}}kcal</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>ここにグラフ表示予定</p>
+    </div>
+
+
+
+
+    
+<div id="data">
+    <div id="data1">
+        <h3 class="title">摂取タンパク質管理</h3>
+        <div class="pro_name">
+            鶏胸肉(50g):<a href="/50/add/cal" id="btn_add">追加</a><a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+        </div>
+        <div class="pro_name">
+            プロテイン(20g):<a href="/20/add/cal" id="btn_add">追加</a><a href="/20/delete/cal" id="btn_del">削除</a><br><br>
+        </div>
+        <div class="pro_name">
+            卵(5g):<a href="/5/add/cal" id="btn_add">追加</a><a href="/5/delete/cal" id="btn_del">削除</a><br><br>
+        </div>
+    </div>
+    <div id="data2">
+        <h3 class="title">ボリューム管理(胸)</h3>
+            チェストプレス(5kg):<a href="/50/add/cal" id="btn_add">10回</a>
+                                <a href="/50/add/cal" id="btn_add">12回</a>
+                                <a href="/50/add/cal" id="btn_add">15回</a>
+                                <a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+            フライ(24kg):<a href="/50/add/cal" id="btn_add">10回</a>
+                                <a href="/50/add/cal" id="btn_add">12回</a>
+                                <a href="/50/add/cal" id="btn_add">15回</a>
+                                <a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+            変形フロントレイズ(5kg):<a href="/50/add/cal" id="btn_add">10回</a>
+                                <a href="/50/add/cal" id="btn_add">12回</a>
+                                <a href="/50/add/cal" id="btn_add">15回</a>
+                                <a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+            クランチ(44kg):<a href="/50/add/cal" id="btn_add">10回</a>
+                                <a href="/50/add/cal" id="btn_add">12回</a>
+                                <a href="/50/add/cal" id="btn_add">15回</a>
+                                <a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+            ツイスト(24kg):<a href="/50/add/cal" id="btn_add">10回</a>
+                                <a href="/50/add/cal" id="btn_add">12回</a>
+                                <a href="/50/add/cal" id="btn_add">15回</a>
+                                <a href="/50/delete/cal" id="btn_del">削除</a><br><br>
+
+
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}
+

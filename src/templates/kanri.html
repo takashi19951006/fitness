@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content%}
+<h1 style="margin:auto;width:40%; text-align: center;">管理画面</h1>
+<div id="data">
+<h1>User</h1>
+{%for i in users%}
+<table id="table" >
+    <thead>
+        <tr>
+            <th style="color:coral">id(PK)</th>
+            <th>pw</th>
+            <th>age</th>
+            <th>height</th>
+            <th>weight</th>
+            <th>bmr</th>
+            <th>tdee</th>
+            <th>protein</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.pw}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.height}}</td>
+            <td>{{i.weight}}</td>
+            <td>{{i.bmr}}</td>
+            <td>{{i.tdee}}</td>
+            <td>{{i.protein}}</td>
+        </tr>
+    </tbody>
+</table>
+{%endfor%}
+</div>
+
+<div id="data">
+<h1>Protein</h1>
+{%for i in proteins%}
+<table id="table" >
+    <thead>
+        <tr>
+            <th style="color:coral">id(PK)</th>
+            <th>protein</th>
+            <th style="color:coral">date(PK)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.protein}}</td>
+            <td>{{i.date}}</td>
+        </tr>
+    </tbody>
+</table>
+{%endfor%}
+</div>
+
+{%endblock%}

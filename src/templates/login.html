@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="login" id="data">
+    <h1>login</h1>
+    <form method="POST">
+    ID(Name)<br>
+    <p id="error_msg">{{error_msg_id}}</p>
+    <input type="text" name="id"><br>
+    PW<br>
+    <p id="error_msg">{{error_msg_pw}}</p>
+    <input type="password" name="pw"><br>
+    <a><input type="submit" value="ログイン" id="touroku"></a>
+</form>
+</div>
+<br>
+<br>
+未登録の方はこちら-><a href="/">新規登録</a>
+{%endblock%}

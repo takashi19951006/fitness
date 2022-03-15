@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="signup" id="data">
+    <h1>新規登録</h1>
+    <p id="error_msg">{{msg}}</p>
+<form method="POST">
+    ID(Name):<input type="text" name="id"><br>
+    PW:<input type="password" name="pw"><br>
+    年齢:<input type="text" name="age"><br>
+    身長:<input type="text" name="height">cm<br>
+    体重:<input type="text" name="weight">kg<br>
+    活動レベル:
+    <select name="active">
+        <option value="1.2">全く運動しない</option>
+        <option value="1.375">週1~2回の運動</option>
+        <option value="1.55">週3~5回の運動</option>
+        <option value="1.725">週6~7回の運動</option>
+        <option value="1.9">1日2回以上の運動</option>
+    </select><br>
+    <a><input type="submit" value="登録" id="touroku"></a>
+</form>
+</div>
+<br>
+<br>
+登録済の方はこちら-><a href="/login">ログイン</a>
+
+
+{%endblock%}
